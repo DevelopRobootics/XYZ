@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 841.89 595.28">
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#Degradado_sin_nombre_232);
+      }
+
+      .st1 {
+        fill: url(#Degradado_sin_nombre_231);
+      }
+
+      .st2 {
+        fill: url(#Degradado_sin_nombre_121);
+      }
+
+      .st3 {
+        fill: #742b85;
+      }
+
+      .st4 {
+        fill: url(#Degradado_sin_nombre_17);
+      }
+
+      .st5 {
+        fill: url(#Degradado_sin_nombre_23);
+      }
+
+      .st6 {
+        fill: #e63b2d;
+      }
+
+      .st7 {
+        fill: #3c2984;
+      }
+
+      .st8 {
+        fill: url(#Degradado_sin_nombre_171);
+      }
+
+      .st9 {
+        fill: url(#Degradado_sin_nombre_12);
+      }
+    </style>
+    <linearGradient id="Degradado_sin_nombre_17" data-name="Degradado sin nombre 17" x1="320.37" y1="102.22" x2="151.5" y2="299.08" gradientUnits="userSpaceOnUse">
+      <stop offset=".27" stop-color="#742b85"/>
+      <stop offset=".99" stop-color="#3c2984"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_171" data-name="Degradado sin nombre 17" x1="40.85" y1="470.04" x2="187.9" y2="256.4" xlink:href="#Degradado_sin_nombre_17"/>
+    <linearGradient id="Degradado_sin_nombre_12" data-name="Degradado sin nombre 12" x1="299.77" y1="283.19" x2="559.14" y2="283.19" gradientUnits="userSpaceOnUse">
+      <stop offset=".27" stop-color="#00b1ce"/>
+      <stop offset=".99" stop-color="#114588"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_121" data-name="Degradado sin nombre 12" x1="524.73" y1="172.33" x2="435.46" y2="266.35" xlink:href="#Degradado_sin_nombre_12"/>
+    <linearGradient id="Degradado_sin_nombre_23" data-name="Degradado sin nombre 23" x1="559.14" y1="398.13" x2="789" y2="398.13" gradientUnits="userSpaceOnUse">
+      <stop offset=".27" stop-color="#ed711f"/>
+      <stop offset=".99" stop-color="#e63b2d"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_231" data-name="Degradado sin nombre 23" y1="168.26" y2="168.26" xlink:href="#Degradado_sin_nombre_23"/>
+    <linearGradient id="Degradado_sin_nombre_232" data-name="Degradado sin nombre 23" x1="559.14" y1="283.19" x2="789" y2="283.19" xlink:href="#Degradado_sin_nombre_23"/>
+  </defs>
+  <path class="st4" d="M299.77,148.51h-31.81c-11.54,0-22.58,5.13-29.5,14.37l-68.49,87.98,25.13,32.34,104.67-134.69Z"/>
+  <path class="st8" d="M40.41,417.88h31.81c11.54,0,22.58-5.39,29.5-14.37l68.24-88,7.21,9.26-32.1-41.59-104.67,134.68Z"/>
+  <path class="st3" d="M202.67,292.94h0l-7.57-9.74-25.13-32.34-8.87-11.41-.06-.08h0l-59.32-76.5c-6.93-9.23-17.96-14.37-29.5-14.37h-31.81l94.16,121.16,10.51,13.53,32.1,41.59h0s61.28,78.73,61.28,78.73c6.93,8.98,17.96,14.37,29.5,14.37h31.81l-97.1-124.94Z"/>
+  <path class="st9" d="M409.57,225.22l-48.49-62.34c-6.93-9.23-17.96-14.37-29.5-14.37h-31.81l95.18,122.37,9.49,12.32,5.13,6.67v128.02h39.77v-128.02c-2.67-17.42-20.01-38.99-20.01-38.99l-19.75-25.65Z"/>
+  <polygon class="st7" points="460 211.51 429.33 250.87 449.34 225.22 460 211.51"/>
+  <path class="st2" d="M527.33,148.51c-11.54,0-22.58,5.13-29.5,14.37l-37.8,48.6h0l-.03.04-10.66,13.7-20.01,25.65s17.34,21.58,20.01,38.99l37.86-48.86,71.94-92.49h-31.81Z"/>
+  <path class="st5" d="M559.14,389.92v27.96h229.86c0-21.81-17.7-39.51-39.76-39.51h-185.74c-2.82,3.08-4.36,7.18-4.36,11.55Z"/>
+  <path class="st1" d="M789,176.47v-27.97h-229.86c0,21.81,17.7,39.51,39.51,39.51h186c2.82-3.08,4.36-7.18,4.36-11.54Z"/>
+  <polygon class="st0" points="731.8 188.02 563.5 378.37 616.35 378.37 784.64 188.02 731.8 188.02"/>
+  <polygon class="st6" points="731.8 188.02 563.5 378.37 616.35 378.37 784.64 188.02 731.8 188.02"/>
+</svg>
