@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 841.89 595.28">
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #0e4586;
+      }
+
+      .st1 {
+        fill: #742b85;
+      }
+
+      .st2 {
+        fill: url(#Degradado_sin_nombre_17);
+      }
+
+      .st3 {
+        fill: url(#Degradado_sin_nombre_23);
+      }
+
+      .st4 {
+        fill: #e63b2d;
+      }
+
+      .st5 {
+        fill: #3c2984;
+      }
+
+      .st6 {
+        fill: url(#Degradado_sin_nombre_12);
+      }
+    </style>
+    <linearGradient id="Degradado_sin_nombre_23" data-name="Degradado sin nombre 23" x1="642.94" y1="410.85" x2="265.5" y2="384.65" gradientUnits="userSpaceOnUse">
+      <stop offset=".27" stop-color="#ed711f"/>
+      <stop offset=".99" stop-color="#e63b2d"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_17" data-name="Degradado sin nombre 17" x1="180.18" y1="337.69" x2="434.67" y2="337.69" gradientUnits="userSpaceOnUse">
+      <stop offset=".27" stop-color="#742b85"/>
+      <stop offset=".99" stop-color="#3c2984"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_12" data-name="Degradado sin nombre 12" x1="435.99" y1="144.31" x2="521.25" y2="397.2" gradientUnits="userSpaceOnUse">
+      <stop offset=".27" stop-color="#00b1ce"/>
+      <stop offset=".99" stop-color="#114588"/>
+    </linearGradient>
+  </defs>
+  <polygon class="st3" points="661.71 299.61 590.85 318.44 512.03 447.84 328.37 332.27 283.37 361.47 531.63 515.68 661.71 299.61"/>
+  <polygon class="st1" points="292.93 515.23 387.44 454.36 387.41 454.35 292.93 515.23"/>
+  <polygon class="st2" points="271.7 377.33 254.48 348.04 434.67 229.48 434.67 160.16 288.09 255.94 180.18 326.51 292.93 515.23 309.7 441.96 276.46 385.43 271.7 377.33"/>
+  <path class="st6" d="M347.56,119.56h124.71l1.39,260.81,43.47,26.4,13.03-24.67-1.48-318.95h-240.09c43.8,40.64,56.24,53.1,58.97,56.41Z"/>
+  <path class="st0" d="M346.44,119.56s3.1,2.4,1.12,0c-2.74-3.31-15.18-15.77-58.97-56.41v163.8s57.85-37.8,57.85-37.8v-69.59Z"/>
+  <polygon class="st4" points="553.93 232.56 553.93 293.82 590.85 318.44 661.71 299.61 553.93 232.56"/>
+  <polygon class="st5" points="338.89 424.21 309.7 441.96 292.93 515.23 387.41 454.35 338.89 424.21"/>
+</svg>

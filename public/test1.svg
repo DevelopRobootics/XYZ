@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 6504.81 4599.83">
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#Degradado_sin_nombre_98);
+        filter: url(#drop-shadow-1);
+      }
+
+      .st0, .st1, .st2, .st3, .st4, .st5, .st6, .st7, .st8, .st9, .st10, .st11, .st12, .st13, .st14, .st15, .st16, .st17, .st18, .st19, .st20, .st21, .st22, .st23, .st24, .st25, .st26, .st27, .st28 {
+        opacity: .7;
+      }
+
+      .st1 {
+        fill: url(#Degradado_sin_nombre_9);
+      }
+
+      .st2 {
+        fill: url(#Degradado_sin_nombre_1763);
+      }
+
+      .st3 {
+        fill: url(#Degradado_sin_nombre_3);
+      }
+
+      .st4 {
+        fill: url(#Degradado_sin_nombre_34);
+      }
+
+      .st5 {
+        fill: url(#Degradado_sin_nombre_36);
+      }
+
+      .st5, .st16 {
+        mix-blend-mode: overlay;
+      }
+
+      .st6 {
+        fill: url(#Degradado_sin_nombre_94);
+      }
+
+      .st7 {
+        fill: url(#Degradado_sin_nombre_73);
+      }
+
+      .st7, .st11 {
+        mix-blend-mode: lighten;
+      }
+
+      .st8 {
+        fill: url(#Degradado_sin_nombre_91);
+      }
+
+      .st9 {
+        fill: url(#Degradado_sin_nombre_96);
+      }
+
+      .st10 {
+        fill: url(#Degradado_sin_nombre_32);
+      }
+
+      .st11 {
+        fill: url(#Degradado_sin_nombre_71);
+      }
+
+      .st12 {
+        fill: url(#Degradado_sin_nombre_97);
+      }
+
+      .st13, .st14, .st29 {
+        fill: none;
+      }
+
+      .st13, .st29 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 7px;
+      }
+
+      .st30 {
+        isolation: isolate;
+      }
+
+      .st15 {
+        fill: url(#Degradado_sin_nombre_1761);
+      }
+
+      .st16 {
+        fill: url(#Degradado_sin_nombre_33);
+      }
+
+      .st17 {
+        fill: url(#Degradado_sin_nombre_7);
+      }
+
+      .st18 {
+        fill: url(#Degradado_sin_nombre_176);
+      }
+
+      .st19 {
+        fill: url(#Degradado_sin_nombre_35);
+      }
+
+      .st20 {
+        fill: url(#Degradado_sin_nombre_288);
+      }
+
+      .st21 {
+        fill: url(#Degradado_sin_nombre_92);
+      }
+
+      .st22 {
+        fill: url(#Degradado_sin_nombre_31);
+      }
+
+      .st23 {
+        fill: url(#Degradado_sin_nombre_74);
+      }
+
+      .st24 {
+        fill: url(#Degradado_sin_nombre_72);
+      }
+
+      .st25 {
+        fill: url(#Degradado_sin_nombre_95);
+      }
+
+      .st26 {
+        fill: url(#linear-gradient);
+      }
+
+      .st27 {
+        fill: url(#Degradado_sin_nombre_1762);
+      }
+
+      .st28 {
+        fill: url(#Degradado_sin_nombre_93);
+      }
+    </style>
+    <linearGradient id="Degradado_sin_nombre_9" data-name="Degradado sin nombre 9" x1="513.55" y1="3697.71" x2="1219.53" y2="3697.71" gradientTransform="translate(2415.33 6317.36) rotate(-155.83)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f63"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_91" data-name="Degradado sin nombre 9" x1="1749.64" y1="5570.5" x2="2473.11" y2="4847.03" gradientTransform="translate(-1191.21 6866.97) rotate(-89.97)" xlink:href="#Degradado_sin_nombre_9"/>
+    <linearGradient id="Degradado_sin_nombre_92" data-name="Degradado sin nombre 9" x1="3308.75" y1="5991.04" x2="2169.79" y2="4852.07" gradientTransform="translate(-1191.21 6866.97) rotate(-89.97)" xlink:href="#Degradado_sin_nombre_9"/>
+    <linearGradient id="Degradado_sin_nombre_176" data-name="Degradado sin nombre 176" x1="1956.65" y1="5363.49" x2="3004.36" y2="4315.78" gradientTransform="translate(-1191.21 6866.97) rotate(-89.97)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b164a5"/>
+      <stop offset=".71" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_3" data-name="Degradado sin nombre 3" x1="3329.51" y1="6011.8" x2="2457.63" y2="5139.92" gradientTransform="translate(-1191.21 6866.97) rotate(-89.97)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#009fe3"/>
+      <stop offset=".71" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_7" data-name="Degradado sin nombre 7" x1="2171.82" y1="7707.94" x2="2171.82" y2="5729.06" gradientTransform="translate(-1191.21 6866.97) rotate(-89.97)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".71" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_31" data-name="Degradado sin nombre 3" x1="2467.74" y1="6945.93" x2="1965.62" y2="6656.03" xlink:href="#Degradado_sin_nombre_3"/>
+    <linearGradient id="Degradado_sin_nombre_93" data-name="Degradado sin nombre 9" x1="3530.99" y1="7921.71" x2="2221.42" y2="7165.63" gradientTransform="translate(-1191.21 6866.97) rotate(-89.97)" xlink:href="#Degradado_sin_nombre_9"/>
+    <linearGradient id="Degradado_sin_nombre_1761" data-name="Degradado sin nombre 176" x1="3044.37" y1="7355.87" x2="3633.03" y2="6336.29" xlink:href="#Degradado_sin_nombre_176"/>
+    <linearGradient id="Degradado_sin_nombre_94" data-name="Degradado sin nombre 9" x1="2842.8" y1="5880.05" x2="3676.02" y2="4436.86" gradientTransform="translate(-1191.21 6866.97) rotate(-89.97)" xlink:href="#Degradado_sin_nombre_9"/>
+    <linearGradient id="Degradado_sin_nombre_71" data-name="Degradado sin nombre 7" x1="1813.81" y1="698.77" x2="2638.8" y2="-126.21" gradientTransform="translate(2781.59 6869.36) rotate(-89.97) scale(1 -1)" xlink:href="#Degradado_sin_nombre_7"/>
+    <linearGradient id="Degradado_sin_nombre_1762" data-name="Degradado sin nombre 176" x1="3711.1" y1="1001.13" x2="2499.28" y2="-210.69" gradientTransform="translate(2781.59 6869.36) rotate(-89.97) scale(1 -1)" xlink:href="#Degradado_sin_nombre_176"/>
+    <linearGradient id="Degradado_sin_nombre_32" data-name="Degradado sin nombre 3" x1="2177.7" y1="608.96" x2="3032.2" y2="-871.09" gradientTransform="translate(2781.59 6869.36) rotate(-89.97) scale(1 -1)" xlink:href="#Degradado_sin_nombre_3"/>
+    <linearGradient id="Degradado_sin_nombre_288" data-name="Degradado sin nombre 288" x1="3881.03" y1="1171.06" x2="2967.42" y2="257.45" gradientTransform="translate(2781.59 6869.36) rotate(-89.97) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#009fe3"/>
+      <stop offset=".71" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_33" data-name="Degradado sin nombre 3" x1="2300.23" y1="2771.89" x2="2300.23" y2="793.04" gradientTransform="translate(2781.59 6869.36) rotate(-89.97) scale(1 -1)" xlink:href="#Degradado_sin_nombre_3"/>
+    <linearGradient id="Degradado_sin_nombre_95" data-name="Degradado sin nombre 9" x1="2761.26" y1="2105.2" x2="2190.48" y2="1775.66" gradientTransform="translate(2781.59 6869.36) rotate(-89.97) scale(1 -1)" xlink:href="#Degradado_sin_nombre_9"/>
+    <linearGradient id="Degradado_sin_nombre_34" data-name="Degradado sin nombre 3" x1="4214.53" y1="3276.22" x2="2266.23" y2="2151.37" gradientTransform="translate(2781.59 6869.36) rotate(-89.97) scale(1 -1)" xlink:href="#Degradado_sin_nombre_3"/>
+    <linearGradient id="Degradado_sin_nombre_1763" data-name="Degradado sin nombre 176" x1="3707.28" y1="2310.72" x2="4244.8" y2="1379.7" gradientTransform="translate(2781.59 6869.36) rotate(-89.97) scale(1 -1)" xlink:href="#Degradado_sin_nombre_176"/>
+    <linearGradient id="Degradado_sin_nombre_96" data-name="Degradado sin nombre 9" x1="3470.07" y1="932.41" x2="4141.54" y2="-230.61" gradientTransform="translate(2781.59 6869.36) rotate(-89.97) scale(1 -1)" xlink:href="#Degradado_sin_nombre_9"/>
+    <linearGradient id="linear-gradient" x1="3706.6" y1="4454.52" x2="3706.6" y2="4454.52" gradientTransform="translate(-1191.21 6866.97) rotate(-89.97)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#a01f80"/>
+      <stop offset="1" stop-color="#b14191"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_72" data-name="Degradado sin nombre 7" x1="2969.53" y1="7312.67" x2="4391.41" y2="4849.9" xlink:href="#Degradado_sin_nombre_7"/>
+    <linearGradient id="Degradado_sin_nombre_73" data-name="Degradado sin nombre 7" x1="3782.47" y1="2953.88" x2="5020.54" y2="1715.81" xlink:href="#Degradado_sin_nombre_7"/>
+    <linearGradient id="Degradado_sin_nombre_97" data-name="Degradado sin nombre 9" x1="-1877.45" y1="3077.37" x2="-978.1" y2="3077.37" gradientTransform="translate(3623.68 5934.31) rotate(-179.97)" xlink:href="#Degradado_sin_nombre_9"/>
+    <linearGradient id="Degradado_sin_nombre_35" data-name="Degradado sin nombre 3" x1="-1877.45" y1="3422.88" x2="-978.1" y2="3422.88" gradientTransform="translate(3623.68 5934.31) rotate(-179.97)" xlink:href="#Degradado_sin_nombre_3"/>
+    <linearGradient id="Degradado_sin_nombre_98" data-name="Degradado sin nombre 9" x1="2387.56" y1="2539.86" x2="2387.56" y2="1707.03" gradientTransform="translate(3623.68 5934.31) rotate(-179.97)" xlink:href="#Degradado_sin_nombre_9"/>
+    <filter id="drop-shadow-1" x="826.43" y="3378.75" width="822.24" height="875.04" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="7"/>
+      <feGaussianBlur result="blur" stdDeviation="7"/>
+      <feFlood flood-color="#000" flood-opacity=".25"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="Degradado_sin_nombre_36" data-name="Degradado sin nombre 3" x1="2463.77" y1="3017.3" x2="2743.79" y2="3017.3" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#Degradado_sin_nombre_3"/>
+    <linearGradient id="Degradado_sin_nombre_74" data-name="Degradado sin nombre 7" x1="-74.98" y1="3925.74" x2="270.43" y2="3925.74" gradientTransform="translate(2415.33 6317.36) rotate(-155.83)" xlink:href="#Degradado_sin_nombre_7"/>
+  </defs>
+  <g class="st30">
+    <g id="Capa_2">
+      <path class="st29" d="M3696.18,1753.49"/>
+      <polygon class="st1" points="3533.5 2572.33 2938.7 2173.45 2890.46 2803.15 3533.5 2572.33"/>
+      <polygon class="st8" points="3264.36 4961.51 4539 4962.21 4652.54 4435.05 3508.08 4545.83 3264.36 4961.51"/>
+      <polygon class="st21" points="3508.08 4545.83 4652.54 4435.05 5486.84 4247.67 3265.17 3726.59 3265.17 3726.59 3508.08 4545.83"/>
+      <polygon class="st18" points="3264.36 4961.51 4652.54 4435.05 3265.17 3726.59 3264.36 4961.51"/>
+      <polygon class="st3" points="5486.84 4247.67 4917.16 3635.76 3265.17 3726.59 5486.84 4247.67"/>
+      <polygon class="st17" points="4652.54 4435.05 6517.88 4963.3 4539 4962.21 4652.54 4435.05"/>
+      <polygon class="st22" points="4652.54 4435.05 5486.84 4247.67 6517.88 4963.3 4652.54 4435.05"/>
+      <path class="st28" d="M5486.84,4247.67c.04-61.16,1032.2-1030.41,1032.2-1030.41l-1.15,1746.04-1031.05-715.63Z"/>
+      <polygon class="st15" points="4917.16 3635.76 6519.03 3217.26 5486.84 4247.67 4917.16 3635.76"/>
+      <polygon class="st6" points="3265.17 3726.59 4917.16 3635.76 3265.54 3163.05 3265.17 3726.59"/>
+      <polygon class="st14" points="3508.08 4545.83 4652.54 4435.05 5486.84 4247.67 3265.17 3726.59 3265.17 3726.59 3508.08 4545.83"/>
+      <polygon class="st14" points="3264.36 4961.51 4652.54 4435.05 3265.17 3726.59 3264.36 4961.51"/>
+      <polygon class="st14" points="5486.84 4247.67 4917.16 3635.76 3265.17 3726.59 5486.84 4247.67"/>
+      <polygon class="st14" points="4652.54 4435.05 6517.88 4963.3 4539 4962.21 4652.54 4435.05"/>
+      <polygon class="st14" points="4652.54 4435.05 5486.84 4247.67 6517.88 4963.3 4652.54 4435.05"/>
+      <path class="st14" d="M5486.84,4247.67c.04-61.16,1032.2-1030.41,1032.2-1030.41l-1.15,1746.04-1031.05-715.63Z"/>
+      <polygon class="st14" points="4917.16 3635.76 6519.03 3217.26 5486.84 4247.67 4917.16 3635.76"/>
+      <polygon class="st14" points="3265.17 3726.59 4917.16 3635.76 3265.54 3163.05 3265.17 3726.59"/>
+      <polygon class="st11" points="3264.36 4961.51 1989.7 4960.81 1877.04 4176.34 3021.32 4342.71 3264.36 4961.51"/>
+      <polygon class="st27" points="3021.32 4342.71 1877.04 4176.34 1043.07 3896.39 3265.54 3163.05 3265.54 3163.05 3021.32 4342.71"/>
+      <polygon class="st10" points="3264.36 4961.51 1877.04 4176.34 3265.54 3163.05 3264.36 4961.51"/>
+      <polygon class="st20" points="1043.07 3896.39 1613.74 2986.75 3265.54 3163.05 1043.07 3896.39"/>
+      <polygon class="st16" points="1877.04 4176.34 10.85 4959.72 1989.7 4960.81 1877.04 4176.34"/>
+      <polygon class="st25" points="1877.04 4176.34 1043.07 3896.39 10.85 4959.72 1877.04 4176.34"/>
+      <path class="st4" d="M1043.07,3896.39c.06-90.99-1030.51-1534.48-1030.51-1534.48l-1.71,2597.81,1032.22-1063.33Z"/>
+      <polygon class="st2" points="1613.74 2986.75 12.56 2361.91 1043.07 3896.39 1613.74 2986.75"/>
+      <polygon class="st9" points="3265.54 3163.05 1613.74 2986.75 2280.01 2571.83 3265.54 3163.05"/>
+      <polygon class="st14" points="3021.32 4342.71 1877.04 4176.34 1043.07 3896.39 3265.57 3124.17 3265.57 3124.17 3021.32 4342.71"/>
+      <polygon class="st14" points="3264.36 4961.51 1877.04 4176.34 3265.54 3163.05 3264.36 4961.51"/>
+      <polygon class="st14" points="1043.07 3896.39 1613.74 2986.75 3265.57 3124.17 1043.07 3896.39"/>
+      <polygon class="st14" points="1877.04 4176.34 10.85 4959.72 1989.7 4960.81 1877.04 4176.34"/>
+      <polygon class="st14" points="1877.04 4176.34 1043.07 3896.39 10.85 4959.72 1877.04 4176.34"/>
+      <path class="st14" d="M1043.07,3896.39c.06-90.99-1030.51-1534.48-1030.51-1534.48l-1.71,2597.81,1032.22-1063.33Z"/>
+      <polygon class="st14" points="1613.74 2986.75 12.56 2361.91 1043.07 3896.39 1613.74 2986.75"/>
+      <polygon class="st14" points="3265.57 3124.17 1613.74 2986.75 3266.12 2285.7 3265.57 3124.17"/>
+      <path class="st26" d="M3265.54,3163.05"/>
+      <polyline class="st24" points="3265.54 3163.05 4917.16 3635.76 6519.03 3217.26 5337.16 2794.77 3265.54 3163.05"/>
+      <polygon class="st7" points="12.56 2361.91 2280.01 2571.83 1613.74 2986.75 12.56 2361.91"/>
+      <polygon class="st13" points="10.77 5079.1 1985.74 5080.19 2162.05 3657.11 697.14 3904.71 10.77 5079.1"/>
+      <polyline class="st13" points="2162.05 3657.11 3454.88 3150.74 12.97 1745.52 12.97 1745.52 697.14 3904.71"/>
+      <polygon class="st13" points="10.77 5079.1 2162.05 3657.11 12.97 1745.52 10.77 5079.1"/>
+      <path class="st29" d="M2513.02,2580.35"/>
+      <line class="st13" x1="12.97" y1="1745.52" x2="3454.88" y2="3150.74"/>
+      <polygon class="st13" points="2162.05 3657.11 5051.84 5081.87 1985.74 5080.19 2162.05 3657.11"/>
+      <polyline class="st13" points="4893.4 1500.58 6519.03 3217.26 5051.84 5081.87 3454.88 3150.74"/>
+      <polygon class="st13" points="2464.27 2135.58 4893.4 1500.58 3454.88 3150.74 2464.27 2135.58"/>
+      <polygon class="st13" points="12.97 1745.52 2464.27 2135.58 13.97 224.31 12.97 1745.52"/>
+      <polygon class="st12" points="5502.92 2978.65 4744.63 3100.34 4603.78 2614.8 5502.92 2978.65"/>
+      <polygon class="st19" points="5502.92 2978.65 5226.75 2046.3 4603.78 2614.8 5502.92 2978.65"/>
+      <polygon class="st0" points="1028.74 4225.71 1627.57 3679.21 847.56 3392.77 1028.74 4225.71"/>
+      <polygon class="st5" points="2743.79 2990.91 2463.77 2891.05 2517.25 3143.55 2743.79 2990.91"/>
+      <polygon class="st23" points="4028.91 2905.82 4132.17 2668.87 3838.76 2485.95 4028.91 2905.82"/>
+    </g>
+  </g>
+</svg>
