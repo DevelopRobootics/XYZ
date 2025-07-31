@@ -5,7 +5,7 @@ export default function PricingCard({ title, price, features = [], savings = "" 
             <div className="space-y-4">
                 <h3 className="text-2xl font-semibold tracking-tight">{title}</h3>
                 <p className="text-4xl font-bold text-black dark:text-white">
-                    <span className="text-blue-600 dark:text-blue-400">{price}</span><span className="text-base font-medium">/mes</span>
+                    <span className="text-[#8B5CF6]">{price}</span><span className="text-base font-medium">/mes</span>
                 </p>
                 {savings && (<p className="text-sm text-green-600 bg-green-100 px-3 py-1 rounded-full inline-block mb-4 font-medium"> 💡 {savings} </p>)}
                 <ul className="space-y-1 text-sm text-gray-600 dark:text-gray-300">

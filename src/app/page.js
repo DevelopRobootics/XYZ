@@ -41,12 +41,13 @@ export default function Home() {
                 {/* Kit Digital sección */}
                 <section className="relative bg-cover bg-center bg-no-repeat bg-[url('/test_opacidad1.svg')] px-4 py-12 sm:py-16 md:py-20">
                     <div className="max-w-7xl mx-auto text-center space-y-6 sm:space-y-8 md:space-y-10 px-2 sm:px-6">
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-black drop-shadow-lg">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-[#3F3F3F] drop-shadow-lg dark:text-white">
                             A través del <span className="text-[#8B5CF6]">Kit Digital</span>, ofrecemos servicios
                         </h1>
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-black drop-shadow-lg">
-                            de <span className="text-[#3B82F6]">alta calidad</span> sin <span className="text-[#F87171]">barreras económicas</span>.
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-[#3F3F3F] drop-shadow-lg dark:text-white">
+                            de <span className="text-[#00B1CE]">alta calidad</span> sin <span className="text-[#ED711F]">barreras económicas</span>
                         </h1>
+
 
                     </div>
 
@@ -72,11 +73,11 @@ export default function Home() {
                 <section className="relative bg-cover bg-center bg-no-repeat bg-[url('/test_opacidad2.svg')] px-4 py-12">
                     {/* Mensaje adicional */}
                     <div className="max-w-6xl mx-auto text-center px-4 md:px-0 py-12 space-y-6 md:space-y-8">
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-black drop-shadow-lg">
-                            Nos <span className="text-[#8B5CF6]">involucramos</span> con cada <span className="text-[#F87171]">cliente</span>
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-[#3F3F3F] drop-shadow-lg dark:text-white">
+                            Nos involucramos con cada <span className="text-[#ED711F]">cliente</span>
                         </h1>
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-black drop-shadow-lg">
-                            como si fuera parte de nuestro <span className="text-[#3B82F6]">equipo</span>
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-[#3F3F3F] drop-shadow-lg dark:text-white">
+                            como si fuera parte de nuestro <span className="text-[#00B1CE]">equipo</span>
                         </h1>
 
                     </div>
