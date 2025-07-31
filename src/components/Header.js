@@ -2,7 +2,7 @@ import { FaSearch } from 'react-icons/fa';
 import Image from 'next/image';
 
 const navItems = [
-    'Inicio', 'Quiénes Somos', 'Nuestros Proyectos', 'Contáctanos'
+    'Inicio', 'Quiénes Somos', 'Servicios', 'Nuestros Proyectos', 'Contáctanos'
 ];
 
 export default function Header() {
