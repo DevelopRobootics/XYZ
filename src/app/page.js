@@ -6,7 +6,7 @@ import servicios from "@/data/servicios";
 import tarifas from "@/data/tarifas";
 import PricingCard from "@/components/cards/PricingCard";
 import DotPatternBackground from '@/components/pattern/DotPatternBackground';
-
+import Carrusel3D from "@/components/carousel/Carrusel3D";
 export default function Home() {
     return (
         <div className="font-sans bg-white text-black min-h-screen  pb-20">
@@ -40,14 +40,13 @@ export default function Home() {
 
                 {/* Kit Digital sección */}
                 <section className="relative bg-cover bg-center bg-no-repeat bg-[url('/test_opacidad1.svg')] px-4 py-12 sm:py-16 md:py-20">
-                    <div className="max-w-7xl mx-auto text-center space-y-6 sm:space-y-8 md:space-y-10 px-2 sm:px-6">
+                    <div className="max-w-7xl mx-auto text-center space-y-6 sm:space-y-8 py-12 md:space-y-10 px-2 sm:px-6">
                         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-[#3F3F3F] drop-shadow-lg dark:text-white">
                             A través del <span className="text-[#8B5CF6]">Kit Digital</span>, ofrecemos servicios
                         </h1>
                         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-[#3F3F3F] drop-shadow-lg dark:text-white">
                             de <span className="text-[#00B1CE]">alta calidad</span> sin <span className="text-[#ED711F]">barreras económicas</span>
                         </h1>
-
 
                     </div>
 
@@ -89,7 +88,7 @@ export default function Home() {
                                 key={index}
                                 title={plan.title}
                                 price={plan.price}
-                                priceColor={plan.priceColor} 
+                                priceColor={plan.priceColor}
                                 savings={plan.savings}
                                 features={plan.features}
                             />
@@ -106,6 +105,7 @@ export default function Home() {
 
                     <QandA />
                 </section>
+                <section><Carrusel3D /></section>
 
 
             </main>

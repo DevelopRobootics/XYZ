@@ -28,7 +28,7 @@ const tarifas = [
     {
         title: "Prime",
         price: "37.95€",
-        priceColor: "#ED711F", // Dorado para destacar
+        priceColor: "#ED711F", // Naranja para destacar
         savings: "Ahorro del 43% y rendimiento completo",
         features: [
             "Diseño personalizado + hasta 10 páginas",
