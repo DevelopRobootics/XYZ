@@ -89,10 +89,12 @@ export default function Home() {
                                 key={index}
                                 title={plan.title}
                                 price={plan.price}
+                                priceColor={plan.priceColor} 
                                 savings={plan.savings}
                                 features={plan.features}
                             />
                         ))}
+
                     </div>
                 </section>
 
