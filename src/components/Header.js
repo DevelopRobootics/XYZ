@@ -8,7 +8,7 @@ const navItems = [
     { label: 'Quiénes Somos', path: '/quienes-somos' },
     { label: 'Servicios', path: '/servicios' },
     { label: 'Nuestros Proyectos', path: '/nuestros-proyectos' },
-    { label: 'Contáctanos', path: '/contactanos' },
+    { label: 'Contáctanos', path: '/contacto' },
 ];
 
 export default function Header() {

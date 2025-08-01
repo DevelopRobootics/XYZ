@@ -105,7 +105,7 @@ export default function Home() {
 
                     <QandA />
                 </section>
-                <section><Carrusel3D /></section>
+                {/* <section><Carrusel3D /></section> */}
 
 
             </main>
