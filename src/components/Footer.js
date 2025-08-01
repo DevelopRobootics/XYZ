@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
             <div className="mx-auto w-full max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+                <div className="grid grid-cols-2 gap-8 md:grid-cols-4 justify-items-center">
                     <div>
                         <h2 className="mb-6 text-sm font-bold text-[#3F3F3F] uppercase dark:text-white">Empresa</h2>
                         <ul className="text-gray-500 dark:text-gray-400 text-sm font-medium space-y-2">
@@ -31,14 +31,14 @@ export default function Footer() {
                     <div>
                         <h2 className="mb-6 text-sm font-bold text-[#3F3F3F] uppercase dark:text-white">Plataformas</h2>
                         <ul className="text-gray-500 dark:text-gray-400 text-sm font-medium space-y-2">
-                            <li><a href="#" className="flex items-center gap-2 hover:text-[#3f3f3f]"><FaApple />iOS</a></li>
-                            <li><a href="#" className="flex items-center gap-2 hover:text-[#3f3f3f]"><FaAndroid />Android</a></li>
-                            <li><a href="#" className="flex items-center gap-2 hover:text-[#3f3f3f]"><FaWindows />Windows</a></li>
-                            <li><a href="#" className="flex items-center gap-2 hover:text-[#3f3f3f]"><FaLaptop />MacOS</a></li>
+                            <li><a href="#" className="flex items-center gap-2 hover:text-[#3f3f3f] dark:hover:text-white"><FaApple />iOS</a></li>
+                            <li><a href="#" className="flex items-center gap-2 hover:text-[#3f3f3f] dark:hover:text-white"><FaAndroid />Android</a></li>
+                            <li><a href="#" className="flex items-center gap-2 hover:text-[#3f3f3f] dark:hover:text-white"><FaWindows />Windows</a></li>
+                            <li><a href="#" className="flex items-center gap-2 hover:text-[#3f3f3f] dark:hover:text-white"><FaLaptop />MacOS</a></li>
                         </ul>
                     </div>
                 </div>
-                <div className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between text-sm text-gray-500 dark:text-gray-300">
+                <div className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between text-sm text-gray-500 dark:text-gray-300 text-center md:text-left">
                     <p>© {new Date().getFullYear()}  XYZ Digital.Todos los derechos reservados.</p>
                     <p className="text-[#00B1CE] font-medium mt-2 sm:mt-0">Impulsamos tu negocio, sin importar su tamaño</p>
                 </div>

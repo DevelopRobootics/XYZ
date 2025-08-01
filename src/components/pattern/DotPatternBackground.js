@@ -1,15 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import { FaHandsHelping } from 'react-icons/fa';
+import { FaHandsHelping } from "react-icons/fa";
 
 const DotPatternBackground = () => {
     return (
-        <div className="relative w-full h-auto overflow-hidden bg-white">
-            <svg
-                className="absolute top-0 left-0 w-full h-full"
-                width="100%"
-                height="100%"
-            >
+        <div className="relative w-full h-auto overflow-hidden bg-white dark:bg-gray-900">
+            <svg className="absolute top-0 left-0 w-full h-full" width="100%" height="100%">
                 <defs>
                     <pattern
                         id="dot-pattern"
@@ -19,16 +15,22 @@ const DotPatternBackground = () => {
                         height="30"
                         patternUnits="userSpaceOnUse"
                     >
-                        <circle cx="2" cy="2" r="2" fill="#e5e7eb" /> {/* gris claro (Tailwind gray-200) */}
+                        <circle
+                            cx="2"
+                            cy="2"
+                            r="2"
+                            className="fill-gray-200 dark:fill-gray-700"
+                        />
                     </pattern>
                 </defs>
                 <rect width="100%" height="100%" fill="url(#dot-pattern)" />
             </svg>
+
             {/* Contenido encima del fondo de puntos */}
             <div className="relative z-10 p-10">
                 <div className="mb-10">
                     <Image
-                        className="dark:invert mx-auto w-[180px] sm:w-[260px] md:w-[300px]"
+                        className=" mx-auto w-[180px] sm:w-[260px] md:w-[300px]"
                         src="/XYZ.svg"
                         alt="XYZ logo"
                         width={300}
@@ -45,8 +47,6 @@ const DotPatternBackground = () => {
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-[#3F3F3F] dark:text-white">
                         sin importar el <span className="text-[#00B1CE]">tamaño</span> de tu empresa
                     </h1>
-
-
                 </div>
 
                 {/* Descripción */}
