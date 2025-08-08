@@ -32,14 +32,11 @@ export default function QandA() {
         <div key={index}>
           <button
             onClick={() => toggle(index)}
-            className="flex justify-between items-center w-full p-4 text-left font-medium text-gray-200 dark:bg-gray-800 dark:text-gray-200 hover:bg-gray-800 dark:hover:bg-gray-800 transition"
+            className="flex justify-between items-center w-full p-4 text-left font-semibold text-indigo-300 dark:text-blue-200 dark:bg-gray-900 dark:text-[#8B5CF6] hover:bg-gray-800 transition duration-300 ease-in-out"
           >
             <span>{item.question}</span>
             <svg
-              className={`w-4 h-4 transform transition-transform ${
-                openIndex === index ? "rotate-180" : ""
-              }`}
-              fill="none"
+              className={`w-5 h-5 transition-transform ${openIndex === index ? "rotate-180" : ""}`}
               stroke="currentColor"
               strokeWidth="2"
               viewBox="0 0 24 24"
@@ -47,6 +44,7 @@ export default function QandA() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
+
           {openIndex === index && (
             <div className="p-4 text-white dark:text-gray-300 dark:bg-gray-900">
               {item.answer}
