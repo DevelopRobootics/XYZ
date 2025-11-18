@@ -59,11 +59,15 @@ const DotPatternBackground = () => {
                 </div>
 
                 {/* Botón de acción */}
-                <div>
+                <div className="flex flex-col items-center gap-4">
                     <button className="bg-black dark:bg-white text-white dark:text-black px-6 py-3 rounded-full text-sm sm:text-base font-medium hover:opacity-90 transition-all flex items-center gap-2 mx-auto">
                         <FaHandsHelping className="w-5 h-5" />
                         Nuestros servicios
                     </button>
+                    <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 dark:border-gray-700 bg-white/90 dark:bg-gray-900/70 text-xs sm:text-sm text-gray-600 dark:text-gray-300 shadow-sm backdrop-blur">
+                        <span className="w-2 h-2 rounded-full bg-[#17e351]" />
+                        <span className="text-6xl">El sitio sigue en construcción, pronto añadiremos más secciones.</span>
+                    </div>
                 </div>
             </div>
         </div>
