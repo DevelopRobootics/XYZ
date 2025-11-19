@@ -41,10 +41,10 @@ const DotPatternBackground = () => {
 
                 {/* Títulos principales */}
                 <div className="space-y-4 mb-10">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-[#3F3F3F] dark:text-white">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-[#1D1D1F] dark:text-white">
                         Impulsamos tu <span className="text-[#ED711F]">negocio</span>,
                     </h1>
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-[#3F3F3F] dark:text-white">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-[#1D1D1F] dark:text-white">
                         sin importar el <span className="text-[#00B1CE]">tamaño</span> de tu empresa
                     </h1>
                 </div>
