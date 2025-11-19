@@ -7,13 +7,14 @@ import tarifas from "@/data/tarifas";
 import PricingCard from "@/components/cards/PricingCard";
 import DotPatternBackground from '@/components/pattern/DotPatternBackground';
 import Carrusel3D from "@/components/carousel/Carrusel3D";
+
 export default function Home() {
     return (
-        <div className="font-sans bg-white text-black dark:bg-gray-900 dark:text-white min-h-screen pb-20">
+        <div className="font-sans bg-white text-black min-h-screen ">
             <main className="grid items-center text-center">
 
                 {/* Encabezado con degradado */}
-                <section className="relative bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 text-center">
+                <section className="relative bg-gradient-to-b from-white to-gray-50 text-center">
                     <DotPatternBackground />
                 </section>
 
@@ -32,15 +33,15 @@ export default function Home() {
                 </section>
 
                 {/* Sección Kit Digital */}
-                <section className="relative bg-cover bg-center bg-no-repeat bg-[url('/test_opacidad1.svg')] px-4 py-12 sm:py-16 md:py-24 dark:bg-gray-900">
+                <section className="relative bg-cover bg-center bg-no-repeat bg-[url('/TestOpacidad/test_opacidad1.svg')] px-4 py-12 sm:py-16 md:py-24">
                     {/* Contenido principal */}
                     <div className="relative max-w-7xl mx-auto text-center space-y-6 sm:space-y-8 py-12 md:space-y-10 px-2 sm:px-6 z-10">
                         {/* Títulos */}
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#3F3F3F] dark:text-white drop-shadow-lg">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#1D1D1F] drop-shadow-lg">
                             A través del <span className="text-[#8B5CF6]">Kit Digital</span>, ofrecemos servicios
                         </h1>
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#3F3F3F] dark:text-white drop-shadow-lg ">
-                            de <span className="text-[#00B1CE]">alta calidad</span> sin <span className="text-[#ED711F]">barreras económicas</span>
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#1D1D1F] drop-shadow-lg">
+                            de <span className="text-[#00B1CE]">alta calidad</span> sin <span className="text-[#1D1D1F]">barreras económicas</span>
                         </h1>
 
                         {/* Tarjetas de servicios */}
@@ -57,17 +58,15 @@ export default function Home() {
                             ))}
                         </div>
                     </div>
-
                 </section>
 
-
                 {/* Cards de tarifas */}
-                <section className="relative bg-cover bg-center bg-no-repeat bg-[url('/test_opacidad2.svg')] px-4 py-12 sm:py-16 md:py-24 dark:bg-gray-900">
+                <section className="relative bg-cover bg-center bg-no-repeat bg-[url('/TestOpacidad/test_opacidad2.svg')] px-4 py-12 sm:py-16 md:py-24">
                     <div className="max-w-6xl mx-auto text-center px-4 md:px-0 py-12 space-y-6 md:space-y-8">
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#3F3F3F] dark:text-white drop-shadow-lg">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#1D1D1F] drop-shadow-lg">
                             Nos involucramos con cada <span className="text-[#ED711F]">cliente</span>
                         </h1>
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#3F3F3F] dark:text-white drop-shadow-lg">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#1D1D1F] drop-shadow-lg">
                             como si fuera parte de nuestro <span className="text-[#00B1CE]">equipo</span>
                         </h1>
                     </div>
@@ -94,7 +93,6 @@ export default function Home() {
                     <QandA />
                 </section>
 
-                {/* <Carrusel3D /> */}
             </main>
         </div>
     );
