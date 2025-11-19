@@ -68,7 +68,7 @@ const DotPatternBackground = () => {
                         Impulsamos tu <span className="text-[#ED711F]">negocio</span>,
                     </h1>
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-[#1D1D1F]">
-                        sin importar el <span className="text-[#00B1CE]">tamaño</span> de tu empresa
+                        sin importar el <span className="text-[#00ff15]">tamaño</span> de tu empresa
                     </h1>
                 </div>
 
