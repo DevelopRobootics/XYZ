@@ -27,12 +27,12 @@ export default function QandA() {
   };
 
   return (
-    <div className="w-full max-w-2xl mt-10 mx-auto divide-y divide-gray-200 dark:divide-gray-700">
+    <div className="w-full max-w-2xl mt-10 mx-auto divide-y divide-gray-700">
       {data.map((item, index) => (
         <div key={index}>
           <button
             onClick={() => toggle(index)}
-            className="flex justify-between items-center w-full p-4 text-left font-semibold text-indigo-300 dark:text-blue-200 dark:bg-gray-900 dark:text-[#8B5CF6] hover:bg-gray-800 transition duration-300 ease-in-out"
+            className="flex justify-between items-center w-full p-4 text-left font-semibold text-blue-200 bg-gray-900 text-[#8B5CF6] hover:bg-gray-800 transition duration-300 ease-in-out"
           >
             <span>{item.question}</span>
             <svg

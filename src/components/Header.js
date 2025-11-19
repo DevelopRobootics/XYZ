@@ -16,27 +16,27 @@ export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-<header className="sticky top-0 bg-black/80 text-gray-200 dark:bg-gray-900 dark:text-gray-200 shadow-md z-50">
-            <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+        <header className="sticky top-0 bg-black/80 text-gray-200 shadow-md z-50">
+            <nav className="max-w-6xl mx-auto flex items-center justify-between px-4 py-2">
                 {/* Logo */}
                 <Link href="/">
                     <div className="flex-shrink-0 cursor-pointer">
                         <Image
                             src="/XYZ B logo.svg"
                             alt="XYZ logo B"
-                            width={64}
-                            height={64}
+                            width={48}
+                            height={48}
                             priority
                         />
                     </div>
                 </Link>
 
                 {/* Desktop nav */}
-                <ul className="hidden md:flex gap-6 text-sm font-light">
+                <ul className="hidden md:flex gap-4 text-sm font-light">
                     {navItems.map((item, i) => (
                         <li key={i}>
                             <Link href={item.path}>
-                                <span className="hover:text-white dark:hover:text-white cursor-pointer hover:bg-gray-600 dark:hover:bg-gray-700 px-2 py-1 rounded transition">
+                                <span className="hover:text-white cursor-pointer hover:bg-gray-600 px-2 py-1 rounded transition">
                                     {item.label}
                                 </span>
                             </Link>
@@ -54,10 +54,10 @@ export default function Header() {
 
             {/* Mobile nav */}
             {menuOpen && (
-                <div className="md:hidden bg-[#313133] dark:bg-gray-900 px-6 py-4 space-y-4 text-sm font-light border-t border-gray-700 dark:border-gray-600">
+                <div className="md:hidden bg-[#313133] px-4 py-3 space-y-3 text-sm font-light border-t border-gray-700">
                     {navItems.map((item, i) => (
                         <Link key={i} href={item.path}>
-                            <span className="block hover:text-white dark:hover:text-white cursor-pointer hover:bg-gray-600 dark:hover:bg-gray-700 px-2 py-1 rounded transition">
+                            <span className="block hover:text-white cursor-pointer hover:bg-gray-600 px-2 py-1 rounded transition">
                                 {item.label}
                             </span>
                         </Link>
