@@ -10,10 +10,10 @@ const DotPatternBackground = () => {
         <div className="relative w-full h-auto overflow-hidden bg-white">
             {/* Banner superior */}
             {showBanner && (
-                <div className="fixed top-16 left-0 w-full z-50 flex items-center justify-between gap-3 px-6 py-3 bg-blue-100 text-sm sm:text-base text-gray-800 shadow-md">
-                    <div className="flex items-center gap-3">
-                        <span className="w-3 h-3 rounded-full bg-green-400 animate-pulse" />
-                        <p className="font-medium">
+                <div className="fixed top-16 left-0 w-full z-50 flex items-center justify-between gap-4 px-6 py-3 text-base sm:text-lg text-slate-900 shadow-md bg-gradient-to-r from-white via-slate-50 to-sky-50 border border-slate-200/70 backdrop-blur">
+                    <div className="flex flex-1 items-center gap-3">
+                        <span className="w-3 h-3 rounded-full bg-green-400 animate-pulse shadow-sm" />
+                        <p className="font-semibold flex-1 text-center text-sky-900 text-lg sm:text-xl leading-snug">
                             🚧 El sitio sigue en construcción, pronto añadiremos más secciones.
                         </p>
                     </div>
@@ -68,7 +68,7 @@ const DotPatternBackground = () => {
                         Impulsamos tu <span className="text-[#ED711F]">negocio</span>,
                     </h1>
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-[#1D1D1F]">
-                        sin importar el <span className="text-[#00ff15]">tamaño</span> de tu empresa
+                        sin importar el <span className="text-[#00B1CE]">tamaño</span> de tu empresa
                     </h1>
                 </div>
 
