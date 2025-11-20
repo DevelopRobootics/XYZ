@@ -28,21 +28,7 @@ const DotPatternBackground = () => {
 
             {/* Fondo con patrón + imagen de fondo */}
             <div className="absolute inset-0">
-                <svg className="absolute top-0 left-0 w-full h-full" width="100%" height="100%">
-                    <defs>
-                        <pattern
-                            id="dot-pattern"
-                            x="0"
-                            y="0"
-                            width="30"
-                            height="30"
-                            patternUnits="userSpaceOnUse"
-                        >
-                            <circle cx="2" cy="2" r="2" className="fill-gray-200" />
-                        </pattern>
-                    </defs>
-                    <rect width="100%" height="100%" fill="url(#dot-pattern)" />
-                </svg>
+                
                 {/* Imagen de fondo */}
                 <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/TestOpacidad/hero_opacidad.png')] h-12 md:h-18 lg:h-72" />
                 <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/TestOpacidad/test_opacidad4.png')] opacity-10" />
@@ -53,8 +39,8 @@ const DotPatternBackground = () => {
                 {/* Imagen arriba */}
                 <div className="mb-2 mt-10">
                     <Image
-                        className="mx-auto w-[180px] sm:w-[260px] md:w-[300px]"
-                        src="/XYZ.svg"
+                        className="mx-auto w-[180px] sm:w-[260px] md:w-[280px]"
+                        src="/XYZ_Digital.svg"
                         alt="XYZ logo"
                         width={300}
                         height={300}
