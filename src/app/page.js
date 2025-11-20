@@ -21,58 +21,52 @@ export default function Home() {
                 {/* Galería de imágenes */}
                 <section className="px-4 md:py-8 md:space-y-8">
                     <Carousel />
-                    {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                        <CardImage src="/Home/design.png" />
-                        <CardImage src="/Home/develop.png" />
-                        <CardImage src="/plan.jpg" />
-                        <CardImage src="/meeting.jpg" />
-                        <CardImage src="/super.jpg" />
-                        <CardImage src="/worker.jpg" />
-                        <CardImage src="/worker2.jpg" />
-                        <CardImage src="/worker3.jpg" />
-                    </div> */}
+
                 </section>
 
                 {/* Sección Kit Digital */}
-                <section className="relative bg-cover bg-center bg-no-repeat bg-[url('/TestOpacidad/test_opacidad1.svg')] px-4 py-12 sm:py-16 md:py-24">
+                <section className="relative bg-[#1D1D1F] px-4 py-12 sm:py-16">
                     {/* Contenido principal */}
                     <div className="relative max-w-7xl mx-auto text-center space-y-6 sm:space-y-8 py-12 md:space-y-10 px-2 sm:px-6 z-10">
                         {/* Títulos */}
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#1D1D1F] drop-shadow-lg">
-                            A través del <span className="text-[#8B5CF6]">Kit Digital</span>, ofrecemos servicios
-                        </h1>
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#1D1D1F] drop-shadow-lg">
-                            de <span className="text-[#00B1CE]">alta calidad</span> sin <span className="text-[#1D1D1F]">barreras económicas</span>
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-white drop-shadow-lg sm:leading-snug md:leading-snug">
+                            A través del Kit Digital, ofrecemos servicios <br />de alta calidad sin barreras económicas
                         </h1>
 
-                        {/* Tarjetas de servicios */}
-                        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-2 sm:px-6 pt-6">
-                            {servicios.map((item, i) => (
-                                <CardServiceList
-                                    key={i}
-                                    icon={item.icon()}
-                                    title={item.title}
-                                    message={item.message}
-                                    linkText={item.linkText}
-                                    linkUrl={item.linkUrl}
-                                />
-                            ))}
+                        <div className="flex justify-center mt-8">
+                            <img src="/Home/laptop.png"></img>
                         </div>
+                    </div>
+                </section>
+                <section className="relative bg-cover bg-center bg-no-repeat bg-[url('/TestOpacidad/test_opacidad1.svg')] px-4 py-44">
+                    {/* Tarjetas de servicios */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-2 sm:px-6 max-w-7xl mx-auto md:mb-20">
+                        {servicios.map((item, i) => (
+                            <CardServiceList
+                                key={i}
+                                iconSrc={item.iconSrc} 
+                                title={item.title}
+                                message={item.message}
+                                linkText={item.linkText}
+                                linkUrl={item.linkUrl}
+                            />
+                        ))}
+
                     </div>
                 </section>
 
                 {/* Cards de tarifas */}
                 <section className="relative bg-cover bg-center bg-no-repeat bg-[url('/TestOpacidad/test_opacidad2.svg')] px-4 py-12 sm:py-16 md:py-24">
-                    <div className="max-w-6xl mx-auto text-center px-4 md:px-0 py-12 space-y-6 md:space-y-8">
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#1D1D1F] drop-shadow-lg">
+                    <div className="max-w-6xl mx-auto text-center px-4 md:px-0 py-12 space-y-6 md:space-y-8 ">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#1D1D1F] drop-shadow-lg absolute inset-x-0 top-0">
                             Nos involucramos con cada <span className="text-[#ED711F]">cliente</span>
                         </h1>
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#1D1D1F] drop-shadow-lg">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#1D1D1F] drop-shadow-lg absolute inset-x-0 top-16">
                             como si fuera parte de nuestro <span className="text-[#00B1CE]">equipo</span>
                         </h1>
                     </div>
 
-                    <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-2 sm:px-6 max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-2 sm:px-6 max-w-7xl mx-auto md:mb-20 mt-10">
                         {tarifas.map((plan, i) => (
                             <PricingCard
                                 key={i}

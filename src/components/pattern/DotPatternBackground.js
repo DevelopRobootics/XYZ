@@ -68,7 +68,7 @@ const DotPatternBackground = () => {
                 </div>
 
                 {/* Botón de acción */}
-                <div className="flex flex-col items-center gap-4">
+                <div className="flex flex-col items-center gap-4 pb-4">
                     <button className="bg-black text-white px-6 py-3 rounded-full text-sm sm:text-base font-medium hover:opacity-90 transition-all flex items-center gap-2 mx-auto">
                         <FaHandsHelping className="w-5 h-5" />
                         Nuestros servicios
