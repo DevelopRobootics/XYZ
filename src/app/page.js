@@ -6,7 +6,7 @@ import servicios from "@/data/servicios";
 import tarifas from "@/data/tarifas";
 import PricingCard from "@/components/cards/PricingCard";
 import DotPatternBackground from '@/components/pattern/DotPatternBackground';
-import Carrusel3D from "@/components/carousel/Carrusel3D";
+import Carousel from "@/components/carousel/carousel3D";
 
 export default function Home() {
     return (
@@ -20,16 +20,17 @@ export default function Home() {
 
                 {/* Galería de imágenes */}
                 <section className="px-4 md:py-8 md:space-y-8">
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                        <CardImage src="/designer.jpg" />
-                        <CardImage src="/designer2.jpg" />
+                    <Carousel />
+                    {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                        <CardImage src="/Home/design.png" />
+                        <CardImage src="/Home/develop.png" />
                         <CardImage src="/plan.jpg" />
                         <CardImage src="/meeting.jpg" />
                         <CardImage src="/super.jpg" />
                         <CardImage src="/worker.jpg" />
                         <CardImage src="/worker2.jpg" />
                         <CardImage src="/worker3.jpg" />
-                    </div>
+                    </div> */}
                 </section>
 
                 {/* Sección Kit Digital */}

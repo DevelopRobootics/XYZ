@@ -28,41 +28,41 @@ const DotPatternBackground = () => {
 
             {/* Fondo con patrón + imagen de fondo */}
             <div className="absolute inset-0">
-                
+
                 {/* Imagen de fondo */}
-                <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/TestOpacidad/hero_opacidad.png')] h-12 md:h-18 lg:h-72" />
+                <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/TestOpacidad/hero_opacidad.png')] h-12 md:h-18 lg:h-52" />
                 <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/TestOpacidad/test_opacidad4.png')] opacity-10" />
             </div>
 
             {/* Contenido principal */}
-            <div className="relative z-10 p-10 md:pt-32 md:mt-20">
+            <div className="relative z-10 p-10 md:pt-32 md:mt-20 ">
                 {/* Imagen arriba */}
                 <div className="mb-2 mt-10">
                     <Image
-                        className="mx-auto w-[180px] sm:w-[260px] md:w-[280px]"
+                        className="mx-auto md:w-64 lg:w-72"
                         src="/XYZ_Digital.svg"
                         alt="XYZ logo"
-                        width={300}
-                        height={300}
+                        width={200}
+                        height={200}
                         priority
                     />
                 </div>
 
                 {/* Títulos principales */}
-                <div className="space-y-4 mb-10">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-[#1D1D1F]">
+                <div className=" mb-10 mt-10">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight tracking-tight text-[#1D1D1F]">
                         Impulsamos tu <span className="text-[#ED711F]">negocio</span>,
                     </h1>
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-[#1D1D1F]">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight tracking-tight text-[#1D1D1F]">
                         sin importar el <span className="text-[#00B1CE]">tamaño</span> de tu empresa
                     </h1>
                 </div>
 
                 {/* Descripción */}
-                <div className="max-w-4xl mx-auto mb-8">
+                <div className="max-w-4xl mx-auto mb-8 mt-2">
                     <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
                         <span className="font-medium text-gray-900">XYZ Digital</span> nace con la misión de ayudar a empresas a crecer en el mundo digital.<br />
-                        En una era donde la visibilidad online lo es todo, trabajamos para que negocios —desde emprendedores locales hasta grandes corporaciones—<br />
+                        En una era donde la visibilidad online lo es todo, trabajamos para que negocios <br />—desde emprendedores locales hasta grandes corporaciones—<br />
                         logren destacar en los motores de búsqueda y conectar con sus clientes ideales.
                     </p>
                 </div>
