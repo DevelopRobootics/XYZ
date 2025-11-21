@@ -80,13 +80,8 @@ export default function Home() {
                     </div>
                 </section>
 
-                {/* Sección de FAQ */}
-                <section className="bg-gray-900 py-16 px-4">
-                    <h1 className="text-3xl sm:text-6xl text-center mb-6 font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-blue-300 to-rose-400">
-                        Preguntas y Respuestas
-                    </h1>
-                    <QandA />
-                </section>
+
+                <QandA />
 
             </main>
         </div>

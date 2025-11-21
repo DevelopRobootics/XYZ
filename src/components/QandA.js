@@ -37,31 +37,38 @@ export default function QandA() {
     };
 
     return (
-        <div className="w-full max-w-2xl mt-10 mx-auto divide-y divide-gray-700">
-            {data.map((item, index) => (
-                <div key={index}>
-                    <button
-                        onClick={() => toggle(index)}
-                        className="flex justify-between items-center w-full p-4 text-left font-semibold text-blue-200 bg-gray-900 text-[#8B5CF6] hover:bg-gray-800 transition duration-300 ease-in-out"
-                    >
-                        <span>{item.question}</span>
-                        <svg
-                            className={`w-5 h-5 transition-transform ${openIndex === index ? "rotate-180" : ""}`}
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            viewBox="0 0 24 24"
-                        >
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
+        <section className="bg-[#000] py-16 px-4">
+            <h1 className="text-3xl sm:text-6xl text-center mb-6 font-bold text-transparent bg-clip-text bg-white">
+                Preguntas y Respuestas
+            </h1>
 
-                    {openIndex === index && (
-                        <div className="p-4 text-white bg-gray-900 text-justify">
-                            {item.answer}
-                        </div>
-                    )}
-                </div>
-            ))}
-        </div>
+            <div className="w-full max-w-2xl mt-10 mx-auto divide-y divide-gray-700">
+                {data.map((item, index) => (
+                    <div key={index}>
+                        <button
+                            onClick={() => toggle(index)}
+                            className="flex justify-between items-center w-full p-4 text-left font-medium text-gray-50 hover:bg-blue-200/20 hover:text-gray-200 transition duration-300 ease-in-out"
+                        >
+                            <span>{item.question}</span>
+                            <svg
+                                className={`w-5 h-5 transition-transform ${openIndex === index ? "rotate-180" : ""}`}
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                viewBox="0 0 24 24"
+                            >
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+
+                        {openIndex === index && (
+                            <div className="p-4 text-white bg-gray-900 text-justify font-light">
+                                {item.answer}
+                            </div>
+                        )}
+                    </div>
+                ))}
+            </div>
+        </section>
+
     );
 }
