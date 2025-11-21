@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaShoppingCart, FaLock, FaExchangeAlt, FaMobileAlt, FaEdit,FaRocket ,FaLightbulb ,FaSearch } from "react-icons/fa";
+import { FaShoppingCart, FaLock, FaExchangeAlt, FaMobileAlt, FaEdit, FaRocket, FaLightbulb, FaSearch, FaEnvelope, FaInfoCircle } from "react-icons/fa";
 export default function Servicios() {
     return (
         <main className="text-gray-200 min-h-screen bg-white">
@@ -29,7 +29,7 @@ export default function Servicios() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         {/* Columna izquierda: Título */}
                         <div className="text-left space-y-6 md:space-y-10">
-                            <h1 className="text-8xl font-bold tracking-tight text-[#1D1D1F] drop-shadow-lg">
+                            <h1 className="text-6xl md:text-8xl font-bold tracking-tight text-[#1D1D1F] drop-shadow-lg">
                                 Servicios
                             </h1>
                             <p className="text-lg text-gray-600 max-w-lg">
@@ -85,9 +85,19 @@ export default function Servicios() {
                     </div>
                 </div>
             </section>
-           
+
             <section className="bg-white py-16 px-6 sm:px-12 md:px-20">
                 <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+
+                    {/* Columna derecha: ilustración */}
+                    <div className="flex justify-center">
+                        <img
+                            src="/Services/tienda_online.png"
+                            alt="Ilustración tienda online"
+                            className="w-full "
+                        />
+                    </div>
                     {/* Columna izquierda: texto */}
                     <div className="space-y-6">
                         <h2 className="text-4xl sm:text-5xl font-bold text-gray-900">
@@ -119,24 +129,15 @@ export default function Servicios() {
                                 Modificación de tiendas online existentes
                             </li>
                         </ul>
-
                         <div className="pt-6">
                             <a
-                                href="/servicios/tienda-online"
-                                className="inline-flex items-center bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:opacity-90 transition-all"
+                                href="/contacto"
+                                className="inline-flex items-center bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:opacity-90 transition-all gap-2"
                             >
+                                <FaInfoCircle className="w-5 h-5" />
                                 Más información
                             </a>
                         </div>
-                    </div>
-
-                    {/* Columna derecha: ilustración */}
-                    <div className="flex justify-center">
-                        <img
-                            src="/Services/tienda_online.png"
-                            alt="Ilustración tienda online"
-                            className="w-full max-w-md rounded-xl shadow-lg"
-                        />
                     </div>
                 </div>
             </section>
