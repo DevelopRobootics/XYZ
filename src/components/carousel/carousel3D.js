@@ -1,88 +1,92 @@
 "use client";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 
-// Carrusel 1
-const imageGroups1 = [
-    ["/Home/design.png", "/Home/develop.png", "/Home/meeting.jpg"],
-    ["/Home/plan.jpg", "/Home/design.png", "/Home/develop.png"],
-    ["/Home/meeting.jpg", "/Home/plan.jpg", "/Home/design.png"],
+const slides = [
+    "/Home/design.png",
+    "/Home/develop.png",
+    "/Home/meeting.jpg",
+    "/Home/plan.jpg",
+    "/Home/super.jpg",
+    "/Home/designer.jpg",
 ];
 
-// Carrusel 2
-const imageGroups2 = [
-    ["/Home/develop.png", "/Home/plan.jpg", "/Home/design.png"],
-    ["/Home/meeting.jpg", "/Home/develop.png", "/Home/plan.jpg"],
-    ["/Home/design.png", "/Home/meeting.jpg", "/Home/develop.png"],
-];
-
-function Carousel({ imageGroups }) {
-    const ref = useRef(null);
+export default function Carousel() {
+    const containerRef = useRef(null);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [isPlaying, setIsPlaying] = useState(true);
 
     useEffect(() => {
-        let scrollPos = 0;
+        const el = containerRef.current;
+        if (!el || !isPlaying) return;
 
-        const step = () => {
-            const el = ref.current;
-            if (!el) return;
+        const interval = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % slides.length);
+        }, 4000);
 
-            scrollPos += 0.5;
-            if (scrollPos >= el.scrollWidth - el.clientWidth) {
-                scrollPos = 0;
-            }
-
-            el.scrollTo({ left: scrollPos, behavior: "smooth" });
-        };
-
-        const interval = setInterval(step, 10);
         return () => clearInterval(interval);
-    }, []);
+    }, [isPlaying]);
+
+    useEffect(() => {
+        const el = containerRef.current;
+        if (!el) return;
+
+        const scrollTo = currentIndex * el.clientWidth;
+        el.scrollTo({ left: scrollTo, behavior: "smooth" });
+    }, [currentIndex]);
 
     return (
-        <div
-            ref={ref}
-            className="flex overflow-x-auto scroll-smooth space-x-6 px-6 py-8"
-            style={{
-                scrollbarWidth: "none", // Firefox
-                msOverflowStyle: "none", // IE/Edge
-            }}
-        >
-            <style jsx>{`
-        div::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
+        <div className="relative w-full overflow-hidden h-[500px] ">
+            {/* Carrusel */}
+            <div
+                ref={containerRef}
+                className="flex overflow-x-hidden scroll-smooth"
+                style={{
+                    scrollbarWidth: "none",
+                    msOverflowStyle: "none",
+                }}
+            >
+                <style jsx>{`
+          div::-webkit-scrollbar {
+            display: none;
+          }
+        `}</style>
 
-            {imageGroups.map((group, index) => (
-                <div
-                    key={index}
-                    className="flex-shrink-0 w-full grid grid-cols-3 gap-4"
-                >
-                    {group.map((src, i) => (
-                        <div key={i} className="rounded-lg overflow-hidden">
-                            <Image
-                                src={src}
-                                alt={`Imagen ${i + 1}`}
-                                width={300}
-                                height={200}
-                                className="object-cover w-full h-[200px] rounded-lg"
-                            />
-                        </div>
-                    ))}
-                </div>
-            ))}
+                {slides.map((src, i) => (
+                    <div
+                        key={i}
+                        className="flex-shrink-0 w-full h-[400px] relative transition-all duration-500"
+                    >
+                        <Image
+                            src={src}
+                            alt={`Slide ${i + 1}`}
+                            fill
+                            className="object-cover"
+                            priority={i === 0}
+                        />
+                    </div>
+                ))}
+            </div>
+
+            {/* Puntitos */}
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+                {slides.map((_, i) => (
+                    <button
+                        key={i}
+                        onClick={() => setCurrentIndex(i)}
+                        className={`w-3 h-3 rounded-full ${i === currentIndex ? "bg-white" : "bg-gray-400"
+                            } transition-all`}
+                    />
+                ))}
+            </div>
+
+            {/* Botón de pausa/play */}
+            <button
+                onClick={() => setIsPlaying((prev) => !prev)}
+                className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm"
+            >
+                {isPlaying ? "⏸ Pausar" : "▶ Reproducir"}
+            </button>
         </div>
-    );
-}
-
-export default function PageWithCarousels() {
-    return (
-        <section className="relative w-full bg-white hidden md:block">
-            {/* Carrusel 1 */}
-            <Carousel imageGroups={imageGroups1} />
-
-            {/* Carrusel 2 */}
-            <Carousel imageGroups={imageGroups2} />
-        </section>
     );
 }

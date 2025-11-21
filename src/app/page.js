@@ -44,7 +44,7 @@ export default function Home() {
                         {servicios.map((item, i) => (
                             <CardServiceList
                                 key={i}
-                                iconSrc={item.iconSrc} 
+                                iconSrc={item.iconSrc}
                                 title={item.title}
                                 message={item.message}
                                 linkText={item.linkText}
@@ -56,12 +56,12 @@ export default function Home() {
                 </section>
 
                 {/* Cards de tarifas */}
-                <section className="relative bg-cover bg-center bg-no-repeat bg-[url('/TestOpacidad/test_opacidad2.svg')] px-4 py-12 sm:py-16 md:py-24">
+                <section className="relative bg-cover bg-center bg-no-repeat bg-[url('/TestOpacidad/test_opacidad2.svg')] px-4 py-12 sm:py-16 md:py-32">
                     <div className="max-w-6xl mx-auto text-center px-4 md:px-0 py-12 space-y-6 md:space-y-8 ">
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#1D1D1F] drop-shadow-lg absolute inset-x-0 top-0">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-[#1D1D1F] drop-shadow-lg  ">
                             Nos involucramos con cada <span className="text-[#ED711F]">cliente</span>
                         </h1>
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#1D1D1F] drop-shadow-lg absolute inset-x-0 top-16">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-[#1D1D1F] drop-shadow-lg  ">
                             como si fuera parte de nuestro <span className="text-[#00B1CE]">equipo</span>
                         </h1>
                     </div>
