@@ -136,7 +136,7 @@ export default function Servicios() {
                         ))
                     ) : (
                         <p className="text-gray-500 text-center">
-                            No se encontraron servicios para "{query}"
+                            No se encontraron servicios para {`"${query}"`}
                         </p>
                     )}
                 </div>
