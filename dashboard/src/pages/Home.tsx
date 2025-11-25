@@ -1,30 +1,22 @@
 import type React from "react";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
+import { categories as staticCategories } from "../data/templates";
 
 type TemplateInfo = {
   name: string;
   folder: string;
-  category: string;
+  category?: string;
   url?: string;
 };
 
 type CategoryInfo = {
   name: string;
+  slug?: string;
   templates: TemplateInfo[];
 };
 
-type ApiResponse = {
-  baseDir?: string;
-  categories?: CategoryInfo[];
-};
-
-const API_URL =
-  import.meta.env.VITE_TEMPLATES_API ?? "http://localhost:8888/api/categories";
-
-const SERVER_BASE =
-  (import.meta.env.VITE_TEMPLATES_HOST ??
-    API_URL.replace(/\/?api\/.+$/, "")) ||
-  "http://localhost:8888";
+const PUBLIC_BASE =
+  (import.meta.env.VITE_TEMPLATES_BASE as string | undefined) ?? "/Plantillas";
 
 const containerStyle: React.CSSProperties = {
   maxWidth: 1200,
@@ -68,68 +60,30 @@ const cardSubtitle: React.CSSProperties = {
 };
 
 export default function Home() {
-  const [categories, setCategories] = useState<CategoryInfo[]>([]);
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [baseDir, setBaseDir] = useState<string | undefined>();
-
-  useEffect(() => {
-    const load = async () => {
-      try {
-        const resp = await fetch(API_URL);
-        if (!resp.ok) throw new Error(`API error ${resp.status}`);
-        const data = (await resp.json()) as ApiResponse;
-        setCategories(data.categories ?? []);
-        setBaseDir(data.baseDir);
-      } catch (err) {
-        const message =
-          err instanceof Error ? err.message : "No se pudo cargar";
-        setError(message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    load();
+  const normalizedCategories = useMemo(() => {
+    return staticCategories.map((cat: CategoryInfo) => ({
+      ...cat,
+      templates: cat.templates.map((tpl) => ({
+        ...tpl,
+        category: tpl.category ?? cat.slug ?? cat.name,
+      })),
+    }));
   }, []);
 
-  const serverBaseClean = useMemo(() => SERVER_BASE.replace(/\/$/, ""), []);
+  const serverBaseClean = useMemo(() => {
+    const trimmed = PUBLIC_BASE.replace(/\/$/, "");
+    if (typeof window === "undefined") return trimmed;
+    return `${window.location.origin}${trimmed}`;
+  }, []);
 
   const buildTemplateUrl = (tpl: TemplateInfo) => {
-    const relative =
-      tpl.url ??
-      `/templates/${encodeURIComponent(tpl.category)}/${encodeURIComponent(
-        tpl.folder
-      )}/`;
+    const base = PUBLIC_BASE.replace(/\/$/, "");
+    const category = encodeURIComponent(tpl.category ?? "");
+    const folder = encodeURIComponent(tpl.folder);
+    const relative = tpl.url ?? `${base}/${category}/${folder}/`;
     if (/^https?:/i.test(relative)) return relative;
-    return `${serverBaseClean}${relative.startsWith("/") ? "" : "/"}${relative}`;
+    return `${relative.startsWith("/") ? relative : `/${relative}`}`;
   };
-
-  if (error) {
-    return (
-      <div style={containerStyle}>
-        <h1 style={{ margin: 0 }}>Dashboard de Plantillas</h1>
-        <p style={{ color: "#b42318", background: "#fee4e2", padding: 12 }}>
-          Error al cargar las plantillas: {error}. Asegurate de que el servidor{" "}
-          <code style={{ background: "#f2f4f7", padding: "2px 6px" }}>
-            {API_URL}
-          </code>{" "}
-          este ejecutandose.
-        </p>
-      </div>
-    );
-  }
-
-  if (loading) {
-    return (
-      <div style={containerStyle}>
-        <h1 style={{ margin: 0 }}>Dashboard de Plantillas</h1>
-        <p style={{ color: "#475569" }}>
-          Cargando plantillas desde {API_URL}...
-        </p>
-      </div>
-    );
-  }
 
   return (
     <div style={containerStyle}>
@@ -138,15 +92,14 @@ export default function Home() {
           Dashboard de Plantillas
         </h1>
         <p style={{ margin: 0, color: "#475569" }}>
-          Servidor:{" "}
+          Servido desde{" "}
           <code style={{ background: "#eef2ff", padding: "3px 8px" }}>
-            {serverBaseClean}
-          </code>{" "}
-          {baseDir ? ` · Carpeta: ${baseDir}` : ""}
+            {serverBaseClean || PUBLIC_BASE}
+          </code>
         </p>
       </div>
 
-      {categories.map((cat) => (
+      {normalizedCategories.map((cat) => (
         <section key={cat.name} style={{ marginTop: 32 }}>
           <div
             style={{
