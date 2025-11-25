@@ -1,0 +1,7 @@
+{
+  "name": "Lumina Estates",
+  "description": "Una plataforma inmobiliaria moderna y elegante con asistencia por IA.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

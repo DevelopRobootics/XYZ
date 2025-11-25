@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KINETIC | Future Wear</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Oswald', 'sans-serif'],
+              mono: ['Roboto Mono', 'monospace'],
+            },
+            colors: {
+              background: '#09090b', // zinc-950
+              surface: '#18181b', // zinc-900
+              neon: '#ccff00', // Acid Green
+              muted: '#52525b', // zinc-600
+              light: '#e4e4e7', // zinc-200
+            },
+            animation: {
+              'glitch': 'glitch 1s linear infinite',
+              'marquee': 'marquee 20s linear infinite',
+            },
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-100%)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body { 
+        font-family: 'Roboto Mono', monospace; 
+        background-color: #09090b; 
+        color: #e4e4e7;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar { width: 4px; }
+      ::-webkit-scrollbar-track { background: #09090b; }
+      ::-webkit-scrollbar-thumb { background: #ccff00; }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      
+      .text-stroke {
+        -webkit-text-stroke: 1px #ccff00;
+        color: transparent;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-[#09090b] text-white antialiased selection:bg-[#ccff00] selection:text-black">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
