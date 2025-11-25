@@ -7,6 +7,7 @@ export default defineConfig({
   base: '/plantillas/',
   build: {
     outDir: '../public/plantillas',
-    emptyOutDir: true,
+    // No borrar el contenido existente (las plantillas viven aquí)
+    emptyOutDir: false,
   },
 })
