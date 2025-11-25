@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 const TEMPLATES_BASE =
-  (import.meta.env.VITE_TEMPLATES_BASE as string | undefined) ?? "/Plantillas";
+  (import.meta.env.VITE_TEMPLATES_BASE as string | undefined) ?? "/plantillas";
 
 export default function Viewer() {
   const { category, folder } = useParams();

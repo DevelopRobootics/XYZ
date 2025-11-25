@@ -16,7 +16,7 @@ type CategoryInfo = {
 };
 
 const PUBLIC_BASE =
-  (import.meta.env.VITE_TEMPLATES_BASE as string | undefined) ?? "/Plantillas";
+  (import.meta.env.VITE_TEMPLATES_BASE as string | undefined) ?? "/plantillas";
 
 const containerStyle: React.CSSProperties = {
   maxWidth: 1200,
