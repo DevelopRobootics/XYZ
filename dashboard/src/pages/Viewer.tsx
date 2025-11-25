@@ -12,7 +12,7 @@ export default function Viewer() {
     const base = TEMPLATES_BASE.replace(/\/$/, "");
     const target = `${base}/${encodeURIComponent(
       category
-    )}/${encodeURIComponent(folder)}/index.html`;
+    )}/${encodeURIComponent(folder)}/dist/index.html`;
     window.location.href = target.startsWith("/") ? target : `/${target}`;
   }, [category, folder]);
 
