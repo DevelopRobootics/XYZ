@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# dashboard build artefacts
+dashboard/node_modules
+dashboard/dist
+public/plantillas
