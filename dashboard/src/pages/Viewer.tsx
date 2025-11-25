@@ -1,19 +1,19 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-const SERVER_BASE =
-  import.meta.env.VITE_TEMPLATES_HOST ?? "http://localhost:8888";
+const TEMPLATES_BASE =
+  (import.meta.env.VITE_TEMPLATES_BASE as string | undefined) ?? "/Plantillas";
 
 export default function Viewer() {
   const { category, folder } = useParams();
 
   useEffect(() => {
     if (!category || !folder) return;
-    const url = `${SERVER_BASE.replace(
-      /\/$/,
-      ""
-    )}/templates/${encodeURIComponent(category)}/${encodeURIComponent(folder)}/`;
-    window.location.href = url;
+    const base = TEMPLATES_BASE.replace(/\/$/, "");
+    const target = `${base}/${encodeURIComponent(
+      category
+    )}/${encodeURIComponent(folder)}/`;
+    window.location.href = target.startsWith("/") ? target : `/${target}`;
   }, [category, folder]);
 
   if (!category || !folder) {
