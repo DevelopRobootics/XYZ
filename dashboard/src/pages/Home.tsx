@@ -80,7 +80,7 @@ export default function Home() {
     const base = PUBLIC_BASE.replace(/\/$/, "");
     const category = encodeURIComponent(tpl.category ?? "");
     const folder = encodeURIComponent(tpl.folder);
-    const relative = tpl.url ?? `${base}/${category}/${folder}/index.html`;
+    const relative = tpl.url ?? `${base}/${category}/${folder}/dist/index.html`;
     if (/^https?:/i.test(relative)) return relative;
     return `${relative.startsWith("/") ? relative : `/${relative}`}`;
   };

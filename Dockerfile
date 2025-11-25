@@ -1,26 +1,17 @@
-# Stage 1: build (clona repo, instala deps y compila Next + dashboard)
+# Stage 1: build (usa el contexto local, instala deps y compila Next + dashboard)
 FROM node:20-slim AS builder
 
 WORKDIR /app
-
-ARG GITHUB_TOKEN
-ARG REPO_PATH="DevelopRobootics/XYZ"
-ARG REPO_BRANCH="master"
-ARG CACHE_BUST="dev"
 
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV NODE_OPTIONS="--max-old-space-size=6144"
 ENV NEXT_SWC_WORKER_COUNT=1
 ENV NEXT_PRIVATE_BUILD_WORKERS=1
 
-RUN apt-get update && apt-get install -y --no-install-recommends git ca-certificates && rm -rf /var/lib/apt/lists/* \
-    && git clone --depth 1 --branch "${REPO_BRANCH}" "https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${REPO_PATH}.git" /tmp/source \
-    && rm -rf /tmp/source/.git \
-    && cp -R /tmp/source/. /app \
-    && rm -rf /tmp/source \
-    && echo "${CACHE_BUST}" > /cache-bust
+# Copiamos todo el contexto (el .dockerignore evita node_modules/.next/.git)
+COPY . .
 
-RUN npm ci --no-fund --no-audit
+RUN npm install --no-fund --no-audit
 RUN npm run build
 
 # Stage 2: runtime (solo dependencias de producción + artefactos build)
@@ -37,7 +28,6 @@ ENV NEXT_PRIVATE_BUILD_WORKERS=1
 COPY --from=builder /app/package.json /app/package-lock.json ./
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
-COPY --from=builder /cache-bust /cache-bust
 
 RUN npm ci --omit=dev --no-fund --no-audit
 
