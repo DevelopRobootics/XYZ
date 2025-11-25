@@ -1,24 +1,48 @@
-// Replica public/plantillas en public/templates para servir assets absolutos "/templates/...".
-import { cp, constants, stat } from 'fs';
+// Normaliza y replica plantillas para que existan en minúsculas y bajo /templates.
+import { access, cp, mkdir } from 'fs/promises';
 import { join } from 'path';
 
-const src = join(process.cwd(), 'public', 'plantillas');
-const dest = join(process.cwd(), 'public', 'templates');
+const root = process.cwd();
+const srcCapital = join(root, 'public', 'Plantillas'); // carpeta original que subiste
+const srcLower = join(root, 'public', 'plantillas');   // destino principal (minúsculas)
+const destTemplates = join(root, 'public', 'templates'); // alias para rutas absolutas "/templates"
 
-const copy = () => {
-  cp(src, dest, { recursive: true, force: true }, (err) => {
-    if (err) {
-      console.error('Error al copiar plantillas -> templates:', err);
-      process.exit(1);
-    }
-    console.log('Copiado plantillas -> templates');
-  });
-};
+async function exists(path) {
+  try {
+    await access(path);
+    return true;
+  } catch {
+    return false;
+  }
+}
 
-stat(src, constants.F_OK, (err) => {
-  if (err) {
-    console.error('No existe public/plantillas; ejecuta primero build:plantillas');
+async function ensureLowercase() {
+  if (await exists(srcLower)) return;
+  if (!(await exists(srcCapital))) {
+    console.error('No se encontró public/Plantillas ni public/plantillas. Asegúrate de tener las plantillas antes de compilar.');
     process.exit(1);
   }
-  copy();
+  await mkdir(join(root, 'public'), { recursive: true });
+  await cp(srcCapital, srcLower, { recursive: true, force: true });
+  console.log('Copiado public/Plantillas -> public/plantillas');
+}
+
+async function copyToTemplates() {
+  if (!(await exists(srcLower))) {
+    console.error('No existe public/plantillas para copiar a templates.');
+    process.exit(1);
+  }
+  await mkdir(join(root, 'public'), { recursive: true });
+  await cp(srcLower, destTemplates, { recursive: true, force: true });
+  console.log('Copiado public/plantillas -> public/templates');
+}
+
+async function main() {
+  await ensureLowercase();
+  await copyToTemplates();
+}
+
+main().catch((err) => {
+  console.error('Error en sync-plantillas:', err);
+  process.exit(1);
 });
