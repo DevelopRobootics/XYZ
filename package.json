@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "npm run build:plantillas && next build",
+    "build:plantillas": "npm --prefix dashboard install --no-fund --no-audit && npm --prefix dashboard run build",
     "start": "next start",
     "lint": "next lint"
   },
