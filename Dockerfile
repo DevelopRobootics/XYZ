@@ -9,6 +9,7 @@ ARG REPO_BRANCH="master"
 ARG CACHE_BUST="dev"
 
 ENV NEXT_TELEMETRY_DISABLED=1
+ENV NODE_OPTIONS="--max-old-space-size=4096"
 
 RUN apk add --no-cache git && \
     git clone --depth 1 --branch "${REPO_BRANCH}" \
@@ -28,6 +29,7 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
+ENV NODE_OPTIONS="--max-old-space-size=4096"
 
 COPY --from=builder /app/package.json /app/package-lock.json ./
 COPY --from=builder /app/.next ./.next
