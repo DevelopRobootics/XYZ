@@ -13,6 +13,8 @@ ENV NODE_OPTIONS="--max-old-space-size=8192"
 ENV NEXT_DISABLE_SWC_WASM=1
 ENV NEXT_SWC_WORKER_COUNT=1
 ENV NEXT_PRIVATE_BUILD_WORKERS=1
+ENV NEXT_MINIFIER=swc
+ENV NEXT_RUNTIME=experimental-edge
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends git ca-certificates && \
@@ -38,6 +40,8 @@ ENV NODE_OPTIONS="--max-old-space-size=8192"
 ENV NEXT_DISABLE_SWC_WASM=1
 ENV NEXT_SWC_WORKER_COUNT=1
 ENV NEXT_PRIVATE_BUILD_WORKERS=1
+ENV NEXT_MINIFIER=swc
+ENV NEXT_RUNTIME=experimental-edge
 
 COPY --from=builder /app/package.json /app/package-lock.json ./
 COPY --from=builder /app/.next ./.next
