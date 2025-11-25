@@ -7,7 +7,6 @@ const nextConfig = {
   async rewrites() {
     return [
       { source: '/plantillas', destination: '/plantillas/index.html' },
-      { source: '/plantillas/:path*', destination: '/plantillas/index.html' },
     ];
   },
 };
