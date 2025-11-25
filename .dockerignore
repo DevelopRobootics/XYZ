@@ -1,0 +1,7 @@
+node_modules
+.next
+dashboard/node_modules
+npm-debug.log*
+yarn-debug.log*
+.git
+.gitignore
