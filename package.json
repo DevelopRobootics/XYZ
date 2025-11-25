@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "npm run sync:plantillas && npm run build:plantillas && npm run sync:plantillas && next build",
-    "build:plantillas": "npm --prefix dashboard install --no-fund --no-audit && npm --prefix dashboard run build && rm -rf dashboard/node_modules",
+    "build": "npm run sync:plantillas && npm run build:dashboard && npm run sync:plantillas && next build",
+    "build:dashboard": "npm --prefix dashboard install --no-fund --no-audit && npm --prefix dashboard run build && rm -rf dashboard/node_modules",
     "sync:plantillas": "node scripts/sync-plantillas.js",
     "start": "next start",
     "lint": "next lint"
