@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vereda - Descubre tu camino</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              pine: {
+                50: '#f2f7f4',
+                100: '#e1ede6',
+                200: '#c3dccf',
+                300: '#99c2ad',
+                400: '#6aa086',
+                500: '#468266',
+                600: '#34664f',
+                700: '#2a5240',
+                800: '#234234',
+                900: '#1d362c',
+                950: '#0f1f19', // Almost black
+              },
+              sand: {
+                50: '#fdfbf7', // Main BG
+                100: '#f7f3eb',
+                200: '#ece4d5',
+                300: '#dcd0b8',
+                400: '#cabb99',
+                500: '#b5a17b',
+                600: '#a38a63',
+                800: '#4a3f30',
+                900: '#3e352b',
+              },
+              citrus: {
+                300: '#d9f99d',
+                400: '#bef264',
+                500: '#a3e635', // Action color
+                600: '#84cc16',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              display: ['Merriweather', 'serif'],
+            },
+            borderRadius: {
+              '4xl': '2rem',
+              '5xl': '2.5rem',
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-sand-50 text-pine-900 antialiased selection:bg-citrus-300 selection:text-pine-900">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
