@@ -13,15 +13,12 @@ ENV NODE_OPTIONS="--max-old-space-size=6144"
 ENV NEXT_SWC_WORKER_COUNT=1
 ENV NEXT_PRIVATE_BUILD_WORKERS=1
 
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends git ca-certificates && \
-    rm -rf /var/lib/apt/lists/* && \
-    git clone --depth 1 --branch "${REPO_BRANCH}" \
-    "https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${REPO_PATH}.git" /tmp/source && \
-    rm -rf /tmp/source/.git && \
-    cp -R /tmp/source/. /app && \
-    rm -rf /tmp/source && \
-    echo "${CACHE_BUST}" > /cache-bust
+RUN apt-get update && apt-get install -y --no-install-recommends git ca-certificates && rm -rf /var/lib/apt/lists/* \
+    && git clone --depth 1 --branch "${REPO_BRANCH}" "https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${REPO_PATH}.git" /tmp/source \
+    && rm -rf /tmp/source/.git \
+    && cp -R /tmp/source/. /app \
+    && rm -rf /tmp/source \
+    && echo "${CACHE_BUST}" > /cache-bust
 
 RUN npm ci --no-fund --no-audit
 RUN npm run build

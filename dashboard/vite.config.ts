@@ -4,9 +4,9 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/plantillas/',
+  base: '/dashboard/',
   build: {
-    outDir: '../public/plantillas',
+    outDir: '../public/dashboard',
     emptyOutDir: true,
   },
 })
