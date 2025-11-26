@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "npm run build:plantillas",
     "dev": "next dev --turbopack",
     "build": "npm run build:plantillas && next build",
-    "build:plantillas": "npm --prefix dashboard install --no-fund --no-audit && npm --prefix dashboard run build && rm -rf dashboard/node_modules",
+    "build:plantillas": "node scripts/build-plantillas.mjs",
     "start": "next start",
     "lint": "next lint"
   },
