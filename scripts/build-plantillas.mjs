@@ -5,7 +5,8 @@ import { execSync } from "node:child_process";
 const root = process.cwd();
 const baseDir = path.join(root, "public", "plantillas");
 const force = process.env.FORCE_BUILD_PLANTILLAS === "1";
-const devShell = process.env.npm_config_script_shell || "C:\\\\Windows\\\\System32\\\\cmd.exe";
+const isWin = process.platform === "win32";
+const devShell = process.env.npm_config_script_shell || (isWin ? "C:\\\\Windows\\\\System32\\\\cmd.exe" : undefined);
 const envKey = process.env.GEMINI_API_KEY || process.env.API_KEY || "DUMMY_KEY_FOR_BUILD";
 
 const isDirectory = (dir) => fs.existsSync(dir) && fs.statSync(dir).isDirectory();
@@ -33,7 +34,8 @@ const fixDistPaths = (distDir, rel) => {
   let html = fs.readFileSync(distIndex, "utf8");
   html = html
     .replace(/href=\"\/index\.css\"/g, 'href="./index.css"')
-    .replace(/(href|src)=\"\/assets\//g, '$1="./assets/');
+    .replace(/(href|src)=\"\/assets\//g, '$1="./assets/')
+    .replace(/(href|src)=\"\/templates\/[^/]+\/[^/]+\/(assets\/)?/g, '$1="./$2');
   fs.writeFileSync(distIndex, html, "utf8");
 };
 
@@ -46,8 +48,10 @@ const buildTemplate = (templateDir, rel) => {
     ...process.env,
     GEMINI_API_KEY: envKey,
     API_KEY: envKey,
-    npm_config_script_shell: devShell,
   };
+  if (devShell) {
+    commonEnv.npm_config_script_shell = devShell;
+  }
 
   if (!fs.existsSync(pkgJson)) {
     console.log(`- Omitido (sin package.json): ${rel}`);
@@ -70,7 +74,12 @@ const buildTemplate = (templateDir, rel) => {
   const installCmd = fs.existsSync(lockFile)
     ? "npm ci --no-fund --no-audit"
     : "npm install --no-fund --no-audit";
-  execSync(installCmd, { cwd: templateDir, stdio: "inherit", shell: true, env: commonEnv });
+  execSync(installCmd, {
+    cwd: templateDir,
+    stdio: "inherit",
+    shell: isWin,
+    env: commonEnv,
+  });
 
   const viteBin = path.join("node_modules", "vite", "bin", "vite.js");
   const buildCmd = fs.existsSync(path.join(templateDir, viteBin))
@@ -79,7 +88,7 @@ const buildTemplate = (templateDir, rel) => {
   execSync(buildCmd, {
     cwd: templateDir,
     stdio: "inherit",
-    shell: true,
+    shell: isWin,
     env: commonEnv,
   });
 
