@@ -20,7 +20,87 @@
 }
 
 body {
-  background: var(--background);
+  background:
+    var(--background)
+    url("/TestOpacidad/test_opacidad4.png") center/cover no-repeat fixed;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+.super-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.35s ease-in-out;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+  border: none;
+  background: #111111;
+  isolation: isolate;
+}
+
+.super-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(from 0deg, #03a1c4, #742b85, #e7462a, #03a1c4);
+  animation: spin-border 10s linear infinite;
+  border-radius: 999px;
+  pointer-events: none;
+  z-index: 0;
+  will-change: transform;
+}
+
+.super-button::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: #111111;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.super-button span,
+.super-button svg {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+}
+
+.super-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.25);
+}
+
+.super-button:hover .arrow {
+  transform: translateX(6px);
+}
+
+.arrow {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.3s ease-in-out;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes spin-border {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

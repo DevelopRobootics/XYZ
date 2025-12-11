@@ -1,86 +1,51 @@
 "use client";
-import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import Banner from "@/components/banners/banner";
 
-const navItems = []; // top navigation hidden
+const navItems = [
+  "Servicios",
+  "Nuestros proyectos",
+  "Plantillas",
+  "Quienes somos",
+  "Contacto",
+];
 
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const pathname = usePathname();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setIsScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const headerStyle = isScrolled
+    ? "bg-white/90 backdrop-blur-sm"
+    : "bg-white backdrop-blur-sm";
 
   return (
     <>
-      <header className="sticky top-0 bg-black/80 text-gray-200 shadow-md z-50">
-        <nav className="max-w-6xl mx-auto flex items-center justify-between px-4 py-1 md:py-2">
-          {/* Logo */}
-          <Link href="/">
-            <div className="flex-shrink-0 cursor-pointer">
-              <Image
-                src="/XYZ B logo.svg"
-                alt="XYZ logo B"
-                width={40}
-                height={40}
-                priority
-              />
-            </div>
-          </Link>
-
-          {/* Desktop nav */}
-          {navItems.length > 0 && (
-            <ul className="hidden md:flex gap-4 text-sm font-light">
-              {navItems.map((item, i) => (
-                <li key={i}>
-                  <Link href={item.path}>
-                    <span
-                      className={`cursor-pointer px-2 py-1 rounded transition ${
-                        pathname === item.path
-                          ? "bg-indigo-600 text-white"
-                          : "hover:text-white hover:bg-gray-600"
-                      }`}
-                    >
-                      {item.label}
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
-
-          {/* Mobile toggle */}
-          {navItems.length > 0 && (
-            <div className="flex md:hidden gap-4 items-center text-lg">
-              <button onClick={() => setMenuOpen(!menuOpen)}>
-                {menuOpen ? <FaTimes /> : <FaBars />}
-              </button>
-            </div>
-          )}
-        </nav>
-        {/* Mobile nav con animacion suave */}
-        {navItems.length > 0 && (
-          <div
-            className={`md:hidden bg-[#313133] px-4 py-2 space-y-2 text-sm font-light border-t border-gray-700 overflow-hidden transition-all duration-300 ease-in-out ${
-              menuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-            }`}
-          >
-            {navItems.map((item, i) => (
-              <Link key={i} href={item.path}>
-                <span
-                  className={`block cursor-pointer px-2 py-1 rounded transition ${
-                    pathname === item.path
-                      ? "bg-indigo-600 text-white"
-                      : "hover:text-white hover:bg-gray-600"
-                  }`}
-                >
-                  {item.label}
-                </span>
-              </Link>
+      <header
+        className={`sticky top-0 inset-x-0 text-gray-900 z-50 transition-colors duration-300 ${headerStyle}`}
+      >
+        <nav className="max-w-6xl mx-auto flex items-center justify-center px-4 py-3">
+          <ul className="flex flex-wrap items-center justify-center gap-6 text-base font-semibold tracking-tight">
+            {navItems.map((label, i) => (
+              <li
+                key={i}
+                className="px-3 py-1 rounded-full text-gray-800 hover:text-black transition"
+              >
+                <span>{label}</span>
+              </li>
             ))}
-          </div>
-        )}
+          </ul>
+        </nav>
+        <div className="flex justify-center pb-3">
+          <span className="inline-block bg-amber-50 text-amber-800 text-xs font-medium px-3 py-2 rounded shadow-sm border border-amber-100">
+            Zona de navegación en construcción.
+          </span>
+        </div>
         <Banner />
       </header>
     </>
